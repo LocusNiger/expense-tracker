@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap");
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.titles-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.titles-container h1 {
+  margin: 1rem 0 0 0;
+}
+
+.titles-container h2 {
+  margin: 0.6rem 0;
+}
+
+.expenses-container {
+  width: 91vw;
+  margin: 1rem 2vw;
+  border: 1px solid red;
+}
+
+.expenses-container .expenses-name {
+  margin: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.expenses-container .expenses-name label {
+  display: inline-block;
+  width: 20%;
+  font-size: 1.6rem;
+}
+
+.expenses-container .expenses-name input {
+  width: 70%;
+  border: 0.1px solid grey;
+  border-radius: 2px;
+  padding: 0.2rem;
+}
+
+.expenses-container .expenses-name ::-webkit-input-placeholder {
+  text-align: start;
+  font-size: 1.2rem;
+}
+
+.expenses-container .expenses-name :-ms-input-placeholder {
+  text-align: start;
+  font-size: 1.2rem;
+}
+
+.expenses-container .expenses-name ::-ms-input-placeholder {
+  text-align: start;
+  font-size: 1.2rem;
+}
+
+.expenses-container .expenses-name ::placeholder {
+  text-align: start;
+  font-size: 1.2rem;
+}
+
+.btn-container {
+  border: 1px solid red;
+  width: 91vw;
+  margin: 1rem 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.expenses-table {
+  border: 1px solid red;
+  width: 91vw;
+  margin: 1rem 2vw;
+}
+
+.expenses-table .expenses {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

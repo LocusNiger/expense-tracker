@@ -146,3 +146,49 @@ body {
     }
   }
 }
+
+//Desktop
+@media only screen and (min-width: 992px) {
+  body {
+    background-image: url(./wave-background-desktop.svg);
+  }
+  .titles-container {
+    h1 {
+      font-size: 7rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+  }
+  .expenses-container {
+    width: 75%;
+    margin: 0 12%;
+    box-sizing: border-box;
+    padding: 1rem;
+    .expenses-name {
+      label {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .btn-container {
+    margin: 1.5rem 1.5rem 2.5rem 1.5rem;
+    .buttons {
+      font-size: 1.5rem;
+    }
+  }
+  .table {
+    .expenses-table {
+      width: 75%;
+      margin: 3rem 12%;
+      tr {
+        .table-header {
+          font-size: 1.6rem;
+        }
+        .expenses {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

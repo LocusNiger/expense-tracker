@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import "reset";
 @import "typo";
 
@@ -9,11 +10,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 2.5rem 0;
   h1 {
     margin: 1rem 0 0 0;
   }
   h2 {
-    margin: 0.6rem 0;
+    margin: 1rem 0 0 0;
   }
 }
 
@@ -21,13 +23,13 @@
   //contenedor tracker
   width: 91vw;
   margin: 1rem 2vw;
-  border: 1px solid red;
   .expenses-name {
     margin: 0.5rem 0;
     display: flex;
     justify-content: space-around;
     label {
       display: inline-block;
+
       width: 20%;
       font-size: 1.6rem;
     }
@@ -45,19 +47,56 @@
 }
 
 .btn-container {
-  border: 1px solid red;
   width: 91vw;
-  margin: 1rem 2vw; //Igual que el margen del contenedor arriba -> importar
+  margin: 2.5rem 2vw; //Igual que el margen del contenedor arriba -> importar
   display: flex;
   justify-content: center;
+  .buttons {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 1.3rem;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+  }
+  button:hover {
+    border: 1px solid #090909;
+  }
 }
+.table {
+  .expenses-table {
+    //tabla
+    width: 91vw;
+    margin: 1rem 2vw; //Igual que el margen del contenedor arriba -> importar
+    padding: 0.5rem;
+    //fondo de tabla
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 
-.expenses-table {
-  //tabla
-  border: 1px solid red;
-  width: 91vw;
-  margin: 1rem 2vw; //Igual que el margen del contenedor arriba -> importar
-  .expenses {
-    text-align: center;
+    tr {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .table-header {
+        border-bottom: 1px solid white;
+        width: 25%;
+        text-align: center;
+        color: white;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+      }
+    }
+    .expenses {
+      width: 25%;
+      text-align: center;
+      color: white;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+    }
   }
 }

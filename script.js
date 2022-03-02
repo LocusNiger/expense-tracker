@@ -8,12 +8,23 @@ addButton.addEventListener("click", addExpense);
 
 //Se llama al tocar 'add expense'
 function addExpense() {
-  //Mando los 3 valores por función
-  newExpense(expenseName.value, expenseDate.value, expenseAmount.value);
-  //dejar en blanco los input
-  expenseName.value = "";
-  expenseDate.value = "";
-  expenseAmount.value = "";
+  //Valido los datos
+  if (expenseName.value.length >= 2 && expenseName.value.length <= 20) {
+    if (expenseAmount.value >= 1 && expenseAmount.value <= 10000) {
+      //Mando los 3 valores por función
+      newExpense(expenseName.value, expenseDate.value, expenseAmount.value);
+      //dejar en blanco los input
+      expenseName.value = "";
+      expenseDate.value = "";
+      expenseAmount.value = "";
+    } else {
+      alert("Invalid amount. Enter the amount correctly");
+      expenseAmount.value = "";
+    }
+  } else {
+    alert("Invalid name.");
+    expenseName.value = "";
+  }
 }
 
 //Para cargar el gasto en la tabla
@@ -21,20 +32,21 @@ function newExpense(expenseName, expenseDate, expenseAmount) {
   /* Meto los valores en los td */
   //Nombre
   let tdName = document.createElement("td");
-  let tdNameText = document.createTextNode(expenseName);
-  tdName.appendChild(tdNameText);
+  tdName.innerHTML = expenseName;
+  tdName.classList.add("expenses"); //Agrego clase
   //Fecha
   let tdDate = document.createElement("td");
-  let tdDateText = document.createTextNode(expenseDate);
-  tdDate.appendChild(tdDateText);
+  tdDate.innerHTML = expenseDate;
+  tdDate.classList.add("expenses"); //Agrego clase
   //Gasto
   let tdAmount = document.createElement("td");
-  let tdAmountText = document.createTextNode(expenseAmount);
-  tdAmount.appendChild(tdAmountText);
+  tdAmount.innerHTML = `$${expenseAmount}`;
+  tdAmount.classList.add("expenses"); //Agrego clase
   //Botón para borrar
   let tdButton = document.createElement("td");
+  tdButton.classList.add("expenses"); //Agrego clase
   let clearButton = document.createElement("button");
-  clearButton.classList.add("clear-btn");
+  clearButton.classList.add("buttons");
   clearButton.textContent = "X";
   clearButton.addEventListener("click", (e) => {
     //para remover la fila
@@ -43,7 +55,6 @@ function newExpense(expenseName, expenseDate, expenseAmount) {
   tdButton.appendChild(clearButton);
   //Creo la fila
   let newRow = document.createElement("tr");
-  newRow.classList.add("expenses"); //Agrego clase
   newRow.appendChild(tdName);
   newRow.appendChild(tdDate);
   newRow.appendChild(tdAmount);

@@ -1,9 +1,23 @@
 .title {
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-weight: 500;
+  color: #f9ed69;
+  font-family: "Lobster", cursive;
+  text-shadow: 2px 3px #b83b5e;
 }
 
 .subtitle {
-  font-weight: 500;
-  font-size: 2rem;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #f9ed69;
+  font-family: "Roboto", sans-serif;
+}
+
+label {
+  font-weight: 300;
+  color: #f9ed69;
+}
+
+.table-header {
+  font-weight: 400;
 }
